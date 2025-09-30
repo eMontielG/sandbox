@@ -9,11 +9,12 @@
     "globals": "^16.4.0",
     "prettier": "^3.6.2",
     "stylelint": "^16.24.0",
+    "stylelint-config-standard": "^39.0.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.44.1",
     "vite": "^7.1.7"
   },
-	"workspaces": [
-		"packages/breakout"
-	]
+  "workspaces": [
+    "packages/breakout"
+  ]
 }
