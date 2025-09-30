@@ -14,7 +14,7 @@ export class Game {
   }
   private loop = (): void => {
     this.renderer.clear()
-    for (const e of this.entities) e.draw(this.renderer)
+    for (const entity of this.entities) entity.draw(this.renderer)
     requestAnimationFrame(this.loop)
   }
 }
