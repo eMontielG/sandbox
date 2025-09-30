@@ -1,4 +1,5 @@
 import type { CanvasConfig } from '../interfaces/configs/canvas-config'
+import type { CircleConfig } from '../interfaces/configs/circle-config'
 import type { RectConfig } from '../interfaces/configs/rect-config'
 import type { Renderer } from '../interfaces/renderer'
 
@@ -13,6 +14,13 @@ export class CanvasRenderer implements Renderer {
   }
   clear(): void {
     this.context.clearRect(0, 0, this.width, this.height)
+  }
+  drawCircle({ fill, radius, x, y }: CircleConfig): void {
+    this.context.beginPath()
+    this.context.arc(x, y, radius, 0, Math.PI * 2)
+    this.context.fillStyle = fill
+    this.context.fill()
+    this.context.closePath()
   }
   drawRect({ fill, height, width, x, y }: RectConfig): void {
     this.context.fillStyle = fill
